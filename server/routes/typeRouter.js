@@ -1,11 +1,10 @@
 const Router = require('express')
 const router = new Router()
+const typeController = require('../controllers/typeController')
 
-router.post('/registration',)
-router.post('/login',)
-router.get('/auth', (req, res) => {
-    res.jso ({message: 'routes working...'})
-})
+router.post('/', typeController.create)
+router.get('/', typeController.getAll)
+
 
 
 module.exports = router
